@@ -52,16 +52,25 @@ function ConvertWithKey() {
 
 //Get the shifted letter for the provided key
 function ShiftWithKey(letterToShift, key) {
+  let result = "";
   let letterIndex = alphabet.indexOf(letterToShift);
-  let totalShiftIndex = letterIndex + key;
 
-  //If the totalShiftIndex is larger than the alphabet, start add 0 and add the remaining numbers to get the true shift key.
-  if (totalShiftIndex > alphabet.length - 1) {
-    totalShiftIndex -= alphabet.length;
+  //If letterIndex is smaller than 0, skip shifting
+  if (letterIndex < 0) {
+    result = letterToShift;
+  } else {
+    let totalShiftIndex = letterIndex + key;
+
+    //If the totalShiftIndex is larger than the alphabet, start add 0 and add the remaining numbers to get the true shift key.
+    if (totalShiftIndex > alphabet.length - 1) {
+      totalShiftIndex -= alphabet.length;
+    }
+
+    //Return character at the totalShiftIndex
+    result = alphabet[totalShiftIndex];
   }
 
-  //Return character at the totalShiftIndex
-  return alphabet[totalShiftIndex];
+  return result;
 }
 
 //Shift the entire message with the provided key
@@ -70,6 +79,7 @@ function ShiftMessageWithKey(message, key) {
 
   for (let i = 0; i < message.length; i++) {
     var letter = message[i];
+
     var shiftedLetter = ShiftWithKey(letter, key);
     shiftedMessage += shiftedLetter;
   }
