@@ -28,7 +28,7 @@ export const alphabet = [
 ];
 
 //Get the shifted letter for the provided key
-function ShiftWithKey(letterToShift, key) {
+export function ShiftLetterWithKey(letterToShift, key) {
   let result = "";
   let letterIndex = alphabet.indexOf(letterToShift);
 
@@ -57,7 +57,7 @@ export function ShiftMessageWithKey(message, key) {
   for (let i = 0; i < message.length; i++) {
     var letter = message[i];
 
-    var shiftedLetter = ShiftWithKey(letter, key);
+    var shiftedLetter = ShiftLetterWithKey(letter, key);
     shiftedMessage += shiftedLetter;
   }
 

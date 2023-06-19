@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/encrypter.js"></script>
     <title>Vigenère Cipher Encrypter</title>
   </head>
   <body>
@@ -19,6 +19,9 @@
       </tr>
     </table>
 
-    <button onclick="StartEncryption()">Encrypt</button>
+    <button id="btnEncrypt">Encrypt</button>
+    <div class="content">
+      <textarea id="txbResult" style="display: none"></textarea>
+    </div>
   </body>
 </html>
