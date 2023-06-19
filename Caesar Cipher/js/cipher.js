@@ -43,16 +43,7 @@ function FillSelect() {
 function ConvertWithKey() {
   let key = parseInt(document.getElementById("sltKey").value);
   let message = document.getElementById("txbInput").value.toLowerCase();
-  let shiftedMessage = "";
-
-  //Shift every letter in the message
-  for (let i = 0; i < message.length; i++) {
-    var letter = message[i];
-    console.log("Shifting letter: " + letter);
-    var shiftedLetter = ShiftWithKey(letter, key);
-    console.log("Shifted to: " + shiftedLetter);
-    shiftedMessage += shiftedLetter;
-  }
+  let shiftedMessage = ShiftMessageWithKey(message, key);
 
   //Display result
   document.getElementById("txbResult").style.display = "block";
@@ -73,6 +64,38 @@ function ShiftWithKey(letterToShift, key) {
   return alphabet[totalShiftIndex];
 }
 
-window.onload = function () {
-  FillSelect();
-};
+//Shift the entire message with the provided key
+function ShiftMessageWithKey(message, key) {
+  let shiftedMessage = "";
+
+  for (let i = 0; i < message.length; i++) {
+    var letter = message[i];
+    var shiftedLetter = ShiftWithKey(letter, key);
+    shiftedMessage += shiftedLetter;
+  }
+
+  return shiftedMessage;
+}
+
+//Try every possible key to decrypt the message
+function BruteForce() {
+  let message = document.getElementById("txbInput").value.toLowerCase();
+
+  let table = document.getElementById("tblResults");
+  let tblBody = table.createTBody();
+  table.style.display = "block";
+
+  //Loop through all keys
+  for (let key = 1; key < alphabet.length; key++) {
+    let shiftedMessage = ShiftMessageWithKey(message, key);
+
+    //Create table row and cells for this key
+    let row = tblBody.insertRow(); //Add key param
+    let KeyCell = row.insertCell(0);
+    let textCell = row.insertCell(1);
+
+    //Populate row
+    KeyCell.innerHTML = key;
+    textCell.innerHTML = shiftedMessage;
+  }
+}

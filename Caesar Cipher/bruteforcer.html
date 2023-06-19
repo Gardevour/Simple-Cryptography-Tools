@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/cipher.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <textarea id="txbInput"></textarea>
+    </div>
+    <div>
+      <button onclick="BruteForce()">Brute force decrypt message</button>
+    </div>
+    <div>
+      <table id="tblResults" style="display: none">
+        <thead>
+          <th>Key used for decryption</th>
+          <th>Text</th>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>
