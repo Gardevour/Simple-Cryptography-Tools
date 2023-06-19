@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
+    <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
+    <script src="js/cipher.js"></script>
+    <title>Caesar Cipher encrypter/decrypter</title>
+  </head>
+  <body onload="FillSelect()">
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html">Caesar Cipher</a>
+          </li>
+          <li class="nav-item active-nav-item">
+            <a href="./encrypter.html">Encrypter</a>
+          </li>
+          <li class="nav-item">
+            <a href="./bruteforcer.html">Brute force decrypter</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <div class="content">
+        <textarea id="txbInput"></textarea>
+      </div>
+      <div class="content">
+        <table>
+          <tbody>
+            <tr>
+              <th>Key</th>
+              <td><select id="sltKey"></select></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button onclick="ConvertWithKey()">Convert with key</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="content">
+        <textarea id="txbResult" style="display: none"></textarea>
+      </div>
+    </div>
+  </body>
+</html>

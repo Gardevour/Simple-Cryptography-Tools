@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/cipher.js"></script>
+    <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
+    <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Caesar Cipher brute force decrypter</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html">Caesar Cipher</a>
+          </li>
+          <li class="nav-item">
+            <a href="./encrypter.html">Encrypter</a>
+          </li>
+          <li class="nav-item active-nav-item">
+            <a href="./bruteforcer.html">Brute force decrypter</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <textarea id="txbInput"></textarea>
+    </div>
+    <div>
+      <button onclick="BruteForce()">Brute force decrypt message</button>
+    </div>
+    <div class="content">
+      <table id="tblResults" style="display: none">
+        <thead>
+          <th>Key used for decryption</th>
+          <th>Text</th>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#indexContent {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#centeredContent {
+  text-align: center;
+}
+
+#tblResults th,
+#tblResults td {
+  border: 1px solid black;
+}
