@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
+    <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Caesar Cipher</title>
   </head>
@@ -26,27 +27,34 @@
 
     <div id="indexContent">
       <div id="centeredContent">
-        <h1>Caesar Cipher</h1>
-        <img src="images/caesarCipher.png" alt="Caesar cipher disk" />
+        <h1 class="content">Caesar Cipher</h1>
+        <img
+          src="images/caesarCipher.png"
+          alt="Caesar cipher disk"
+          class="content"
+        />
       </div>
 
-      <p>
-        In cryptography, a Caesar cipher, also known as Caesar's cipher, the
-        shift cipher, Caesar's code, or Caesar shift, is one of the simplest and
-        most widely known encryption techniques. It is a type of substitution
-        cipher in which each letter in the plaintext is replaced by a letter
-        some fixed number of positions down the alphabet. For example, with a
-        left shift of 3, D would be replaced by A, E would become B, and so on.
-        The method is named after Julius Caesar, who used it in his private
-        correspondence.
-      </p>
-      <p>
-        The encryption step performed by a Caesar cipher is often incorporated
-        as part of more complex schemes, such as the Vigenère cipher, and still
-        has modern application in the ROT13 system. As with all single-alphabet
-        substitution ciphers, the Caesar cipher is easily broken and in modern
-        practice offers essentially no communications security.
-      </p>
+      <div class="main-content">
+        <p class="content">
+          In cryptography, a Caesar cipher, also known as Caesar's cipher, the
+          shift cipher, Caesar's code, or Caesar shift, is one of the simplest
+          and most widely known encryption techniques. It is a type of
+          substitution cipher in which each letter in the plaintext is replaced
+          by a letter some fixed number of positions down the alphabet. For
+          example, with a left shift of 3, D would be replaced by A, E would
+          become B, and so on. The method is named after Julius Caesar, who used
+          it in his private correspondence.
+        </p>
+        <p class="content">
+          The encryption step performed by a Caesar cipher is often incorporated
+          as part of more complex schemes, such as the Vigenère cipher, and
+          still has modern application in the ROT13 system. As with all
+          single-alphabet substitution ciphers, the Caesar cipher is easily
+          broken and in modern practice offers essentially no communications
+          security.
+        </p>
+      </div>
     </div>
   </body>
 </html>
