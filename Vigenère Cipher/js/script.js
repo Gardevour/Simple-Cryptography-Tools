@@ -1,9 +1,15 @@
+import { alphabet } from "../../Generic assets/js/caesarCipher.js";
+
 var StartEncryption = () => {
   let key = document.getElementById("txbKey").value.toLowerCase();
   let message = document.getElementById("txbMessage").value.toLowerCase();
-
   let keyStream = GetKeyStream(key, message.length);
-  console.log(keyStream);
+
+  //Loop through all characters in the message
+  for (let i = 0; i <= message.length - 1; i++) {
+    let messageLetter = String(message).charAt(i);
+    let messageLetterIndex = alphabet.indexOf(messageLetter);
+  }
 };
 
 var GetKeyStream = (key, messageLength) => {
