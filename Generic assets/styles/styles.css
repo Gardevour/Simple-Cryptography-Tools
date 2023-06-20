@@ -14,3 +14,12 @@
 .centeredContent {
   text-align: center;
 }
+
+.content-img {
+  width: 50vw;
+  height: 50vh;
+}
+
+ul {
+  margin-left: 2%;
+}
