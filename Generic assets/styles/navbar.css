@@ -32,3 +32,8 @@
   float: right;
   background-color: #04aa6d;
 }
+
+.home-nav-item {
+  float: left;
+  background-color: #04aa6d;
+}
