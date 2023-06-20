@@ -7,47 +7,39 @@
     <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
     <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
     <script type="module" src="js/encrypter.js"></script>
-    <title>Caesar Cipher encrypter/decrypter</title>
+    <title>Vigenère Cipher Encrypter</title>
   </head>
   <body>
     <header>
       <nav>
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="./index.html">Caesar Cipher</a>
+            <a href="./index.html">Vigenère Cipher</a>
           </li>
           <li class="nav-item active-nav-item">
             <a href="./encrypter.html">Encrypter</a>
           </li>
           <li class="nav-item">
-            <a href="./bruteforcer.html">Brute force decrypter</a>
+            <a href="./decrypter.html">Decrypter</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <div>
-      <div class="content">
-        <textarea id="txbInput"></textarea>
-      </div>
-      <div class="content">
-        <table>
-          <tbody>
-            <tr>
-              <th>Key</th>
-              <td><select id="sltKey"></select></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <button id="btnEncrypt">Convert with key</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="content">
-        <textarea id="txbResult" style="display: none"></textarea>
-      </div>
+    <table>
+      <tr>
+        <td>Key</td>
+        <td><textarea id="txbKey"></textarea></td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td><textarea id="txbMessage"></textarea></td>
+      </tr>
+    </table>
+
+    <button id="btnEncrypt">Encrypt</button>
+    <div class="content">
+      <textarea id="txbResult" style="display: none"></textarea>
     </div>
   </body>
 </html>

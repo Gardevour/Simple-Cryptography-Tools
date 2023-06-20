@@ -5,3 +5,21 @@
 .main-content {
   margin: auto 17%;
 }
+
+.indexContent {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.centeredContent {
+  text-align: center;
+}
+
+.content-img {
+  width: 50vw;
+  height: 50vh;
+}
+
+ul {
+  margin-left: 2%;
+}

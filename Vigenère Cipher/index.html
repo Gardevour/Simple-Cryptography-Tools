@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
+    <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
+    <title>Vigenère Cipher</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item active-nav-item">
+            <a href="./index.html">Vigenère Cipher</a>
+          </li>
+          <li class="nav-item">
+            <a href="./encrypter.html">Encrypter</a>
+          </li>
+          <li class="nav-item">
+            <a href="./decrypter.html">Decrypter</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="indexContent">
+      <div class="centeredContent">
+        <h1 class="content">Vigenère Cipher</h1>
+        <img
+          src="images/vigenereCipher2.png"
+          alt="Vigenère cipher table"
+          class="content content-img"
+        />
+      </div>
+
+      <div class="main-content">
+        <p class="content">
+          The Vigenère cipher is a method of encrypting alphabetic text where
+          each letter of the plaintext is encoded with a different Caesar
+          cipher, whose increment is determined by the corresponding letter of
+          another text, the key.
+        </p>
+        <p class="content">
+          For example, if the plaintext is attacking tonight and the key is
+          OCULORHINOLARINGOLOGY, then
+        </p>
+        <div class="content">
+          <ul>
+            <li style="display: list-item">
+              the first letter a of the plaintext is shifted by 14 positions in
+              the alphabet (because the first letter O of the key is the 14th
+              letter of the alphabet, counting from 0), yielding o;
+            </li>
+            <li>
+              the second letter t is shifted by 2 (because the second letter C
+              of the key means 2) yielding v;
+            </li>
+            <li>
+              the third letter t is shifted by 20 (U) yelding n, with
+              wrap-around;
+            </li>
+          </ul>
+        </div>
+        <p class="content">
+          and so on; yielding the message ovnlqbpvt eoeqtnh. If the recipient of
+          the message knows the key, they can recover the plaintext by reversing
+          this process. The Vigenère cipher is therefore a special case of a
+          polyalphabetic substitution.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
