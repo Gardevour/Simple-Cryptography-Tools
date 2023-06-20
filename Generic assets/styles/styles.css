@@ -5,3 +5,12 @@
 .main-content {
   margin: auto 17%;
 }
+
+.indexContent {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.centeredContent {
+  text-align: center;
+}
