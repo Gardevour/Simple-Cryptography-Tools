@@ -25,6 +25,16 @@ function InvertMessage() {
     }
   }
 
+  var newMsg = invertedBinary
+    .split(" ")
+    .map((bin) => String.fromCharCode(parseInt(bin, 2)))
+    .join("");
+
   console.log(messageInBinary);
   console.log(invertedBinary);
+  console.log(newMsg);
+
+  //Display result
+  document.getElementById("txbResult").style.display = "block";
+  document.getElementById("txbResult").value = newMsg;
 }
