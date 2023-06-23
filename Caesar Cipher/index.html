@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Generic assets/styles/navbar.css" />
     <link rel="stylesheet" href="../Generic assets/styles/styles.css" />
+    <script src="./js/script.js"></script>
     <title>Caesar Cipher</title>
   </head>
   <body>
@@ -38,6 +39,23 @@
       </div>
 
       <div class="main-content">
+        <dialog rot13-dialog>
+          <button btnCloseModal>Close</button>
+          <p class="content">
+            ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a
+            simple letter substitution cipher that replaces a letter with the
+            13th letter after it in the latin alphabet. ROT13 is a special case
+            of the Caesar cipher which was developed in ancient Rome.
+          </p>
+          <p class="content">
+            Because there are 26 letters (2×13) in the basic Latin alphabet,
+            ROT13 is its own inverse; that is, to undo ROT13, the same algorithm
+            is applied, so the same action can be used for encoding and
+            decoding. The algorithm provides virtually no cryptographic
+            security, and is often cited as a canonical example of weak
+            encryption.
+          </p>
+        </dialog>
         <p class="content">
           In cryptography, a Caesar cipher, also known as Caesar's cipher, the
           shift cipher, Caesar's code, or Caesar shift, is one of the simplest
@@ -52,10 +70,10 @@
           The encryption step performed by a Caesar cipher is often incorporated
           as part of more complex schemes, such as the
           <a href="../Vigenère Cipher/index.html">Vigenère cipher</a>, and still
-          has modern application in the ROT13 system. As with all
-          single-alphabet substitution ciphers, the Caesar cipher is easily
-          broken and in modern practice offers essentially no communications
-          security.
+          has modern application in the
+          <a href="" btnOpenModal>ROT13 system</a>. As with all single-alphabet
+          substitution ciphers, the Caesar cipher is easily broken and in modern
+          practice offers essentially no communications security.
         </p>
         <p class="content">
           In order to determine the decryption key for your cipher text. Simple
